@@ -40,4 +40,17 @@ public class AddressBook {
         System.out.println(contact);
 
     }
+
+    public void editContact() {
+        System.out.println("Enter First Name of Person");
+        String editName = sc.nextLine();
+        if (editName.equalsIgnoreCase(contact.getFirstName())){
+            add();
+            //  System.out.println(contact);
+        }else {
+            System.out.println("Invalid Name......!");
+            System.out.println("Please enter valid First Name");
+            editContact();
+        }
+    }
 }
