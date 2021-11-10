@@ -9,10 +9,10 @@ public class AddressBook {
     public static Map<String, Contacts> nameHashMap = new HashMap<String, Contacts>();
     public static Map<String, Contacts> cityHashMap = new HashMap<String, Contacts>();
     public static Map<String, Contacts> stateHashMap = new HashMap<String, Contacts>();
-
     static Scanner sc = new Scanner(System.in);
     static AddressBook addressBook = new AddressBook();
-    public static boolean addContact(Contacts contact) {
+
+    public static boolean   addContact(Contacts contact) {
         List<Contacts> checkByName = searchByName(contact.getfName());
         for (Contacts equalName : checkByName) {
             if (equalName.equals(contact))
@@ -122,7 +122,6 @@ public class AddressBook {
             switch (choice) {
                 case 1:
                     if (addContact(readContact()))   //call addcontact with passing method readcontact
-
                         System.out.println("Cotact Added Successfully....!");
                     else
                         System.out.println("Contact Already Exist....!");
@@ -290,4 +289,5 @@ public class AddressBook {
                 System.out.println("INVALID CHOICE!");
         }
     }
+
 }
