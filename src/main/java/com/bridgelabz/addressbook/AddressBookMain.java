@@ -14,7 +14,8 @@ public class AddressBookMain {
             System.out.println("3. Delete Address Book");
             System.out.println("4. Search Contact Data");
             System.out.println("5. View Contact Data");
-            System.out.println("6. Exit");
+            System.out.println("6. Count Contacts ");
+            System.out.println("7. Exit");
             System.out.print("Enter Your choice: ");
             int choice = sc.nextInt();
             sc.nextLine();
@@ -40,7 +41,7 @@ public class AddressBookMain {
                     break;
                 case 3:
                     System.out.println("List of available Address Book : ");
-                    Set keys1 = addressBookMap.keySet();//retrieved keys from hashmap to show addressbooklist
+                    Set keys1 = addressBookMap.keySet();//retrived keys from hashmap to show addressbooklist
                     Iterator i1 = keys1.iterator();
                     while (i1.hasNext()){
                         System.out.println(i1.next());
@@ -58,6 +59,10 @@ public class AddressBookMain {
                     addressBook.viewByOption(addressBookMap);
                     break;
                 case 6:
+                    System.out.println("Welcome to the couter");
+                    addressBook.countByOption();
+                    break;
+                case 7:
                     sc.close();//for closing the programme
                     return;
                 default:
