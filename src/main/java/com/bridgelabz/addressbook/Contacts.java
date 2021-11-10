@@ -1,105 +1,46 @@
 package com.bridgelabz.addressbook;
 
 public class Contacts {
-   private String firstName;
-   private String lastName;
-   private String address;
-   private String City;
-   private String state;
-   private long zipCode;
-   private long phoneNumber;
-   private String email;
+    private String fName;
+    private String lName;
+    private String address;
+    private String city;
+    private String state;
+    private Long zip;
+    private Long phone;
+    private String email;
 
-    public Contacts(String firstName, String lastName, String address, String city, String state, long zipCode, long phoneNumber, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Contacts(String fName, String lName, String address, String city, String state, Long zip, Long phone,
+                    String email) {
+        this.fName = fName;
+        this.lName = lName;
         this.address = address;
-        this.City = city;
+        this.city = city;
         this.state = state;
-        this.zipCode = zipCode;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-    }
-
-    public Contacts() {
-
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getCity() {
-        return City;
-    }
-
-    public void setCity(String city) {
-        City = city;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public long getZipCode() {
-        return zipCode;
-    }
-
-    public void setZipCode(long zipCode) {
-        this.zipCode = zipCode;
-    }
-
-    public long getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(long phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
+        this.zip = zip;
+        this.phone = phone;
         this.email = email;
     }
 
     @Override
     public String toString() {
-        return "Contacts{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
-                ", City='" + City + '\'' +
-                ", state='" + state + '\'' +
-                ", zipCode=" + zipCode +
-                ", phoneNumber=" + phoneNumber +
-                ", email='" + email + '\'' +
-                '}';
+        return
+                "\nFirst_Name  : " + fName +
+                        "\nLast_Name   : " + lName +
+                        "\nAddress     : " + address +
+                        "\nCity        : " + city +
+                        "\nState       : " + state +
+                        "\nZIP Code    : " + zip +
+                        "\nPhone_Number: " + phone +
+                        "\nEmail_ID    : " + email +
+                        "\n-----------------------------------";
+    }
+
+    public String getfName() {
+        return fName;
+    }
+
+    public void setfName(String fName) {
+        this.fName = fName;
     }
 }

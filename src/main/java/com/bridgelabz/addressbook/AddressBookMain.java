@@ -4,14 +4,12 @@ import java.util.*;
 
 public class AddressBookMain {
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
         AddressBook addressBook = new AddressBook();
         Map<String, AddressBook> addressBookMap = new HashMap<String,AddressBook>();
 
         while (true) {
-            //Displaying Welcome Message
-            System.out.println("\n--------------------------Welcome to Address Book System Problem--------------------------");
+            System.out.println("\n--------------------------Welcome to Address Book System--------------------------");
             System.out.println("1. New Address Book");
             System.out.println("2. Select Address Book");
             System.out.println("3. Delete Address Book");
@@ -54,4 +52,3 @@ public class AddressBookMain {
         }
     }
 }
-
